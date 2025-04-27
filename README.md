@@ -1,72 +1,60 @@
-# 🖥️ lumigrid-node-display: Drive Your Displays! 🖥️
+# ✨ LumiGrid - Display Node ✨
 
-Welcome to the lumigrid-node-display repository! 🚀 This is where the code lives for the Raspberry Pi-powered Display Node, capable of driving HUB75 panels and HDMI displays. Get ready to show off your content! 🤩
+---
 
-This node is part of the LumiGrid ecosystem, brought to you by Cube & Reclame Fabriek, with development led by DevSlavDev.
+## 💡 What is this Node?
 
-## 📂 What's Inside?
+The Display Node is your canvas for visual content in the LumiGrid system! 🖼️📺 Built on the capable Raspberry Pi, this node specializes in driving high-density HUB75 LED matrix panels or acting as a powerful Digital Signage player for standard HDMI screens.
 
-This repository contains the code and resources for the Display Node:
+Developed with passion by **DevSlavDev** 👨‍💻 in collaboration with **Cube & Reclame Fabriek** 🏢.
 
-* `app/`:  Source code for the Raspberry Pi application (C++). This handles HUB75 driving, HDMI output, the web server, and more. 💻
-* `web/`:  Node-specific web UI components for managing display content and settings. 💅
-* `config/`:  Default configuration files for the Display Node. ⚙️
-* `scripts/`:  Scripts for building and deploying the application to the Raspberry Pi. 🛠️
-* `README.md`:  That's me! 👋 Your guide to this repository.
+---
 
-## 🛠️ Project Structure
+## 🚀 Key Features
 
-Here's the layout of the repository:
+* **HUB75 Matrix Control:** Drive large, vibrant HUB75 LED matrix panels using the optimized hzeller/rpi-rgb-led-matrix library. 🟥🟩🟦
+    * Supports driving up to 3 parallel chains!
+* **HDMI Digital Signage:** Turn any standard HDMI display into a dynamic signage screen. 📊
+    * Play images, videos, and potentially run specific applications. ▶️🖼️
+* **Dynamic Content:** Display a variety of information.
+    * Time, Date, Sensor Data, User Text/Images/Videos. ⏰🗓️📊📝🖼️▶️
+    * Integrations for Crypto/Finance Tickers, Transport info, Weather, and AI interaction! 💲🚆☁️🤖
+* **Control Modes:** Supports External (MQTT, Art-Net via Pi capabilities), Sync (Master/Slave), and Independent modes. 🚦
+* **Calendar-Based Playback:** Equipped with an RTC for scheduled content playback. 🗓️
+* **Preset Support:** Define presets for specific content frame configurations or media playback settings.
+* **Sensor Data Integration:** Can receive and display data pushed from Sensor Nodes. 📊➡️🖼️
+* **REST API & Web UI:** Configurable and controllable via local network using Flask. 🌐
 
-lumigrid-node-display/
-├── app/        💻 (Raspberry Pi Application)
-├── web/        💅 (Web UI)
-├── config/     ⚙️ (Configuration)
-├── scripts/    🛠️ (Build/Deploy Scripts)
-└── README.md   📖 (You are here!)
+---
 
+## 🧠 Technology Stack
 
-## 🔗 Related Repositories
+* **Hardware:** Raspberry Pi Zero 2 W / Raspberry Pi 4 / Raspberry Pi 5 🧠
+* **Operating System:** Raspberry Pi OS (RPiOS)
+* **Software:** C++, Python/Flask
+* **Display Libraries:** hzeller/rpi-rgb-led-matrix (C++), potentially others for HDMI playback.
+* **Communication:** Ethernet/WiFi, HTTP/REST, mDNS, UDP (for Sync), Art-Net, MQTT.
 
-* [LumiGrid (Main Repository)](https://github.com/DevSlavDev/LumiGrid):  Contains shared resources and documentation. 🧠
+---
 
-## ✨ Features
+## 🚧 Work In Progress (WIP)! 🚧
 
-* Drives up to 3 parallel HUB75 chains. [cite: 36]
-* Functions as a digital signage player for HDMI displays. [cite: 36]
-* Supports various content frames (time, date, sensor data, images, videos, etc.). [cite: 37]
-* Provides a web interface and REST API for control. [cite: 38]
-* Uses presets to define content frame configurations. [cite: 38]
+This node is currently the **primary focus of development!** 💪 We are actively working on implementing its core functionality, integrating with the chosen display libraries, building the Web UI, and critically, tuning the Raspberry Pi sync mechanism. ✨
 
-## 🚀 Getting Started
+---
 
-1.  **Clone this repository:**
+## 🤝 Contributions
 
-    ```bash
-    git clone [https://github.com/DevSlavDev/lumigrid-node-display.git](https://github.com/DevSlavDev/lumigrid-node-display.git)
-    cd lumigrid-node-display
-    ```
+Currently, contributions are not being actively accepted for this specific node as it is the main focus of ongoing development.
 
-2.  **Set up your Raspberry Pi:** Make sure you have Raspberry Pi OS installed.
+**HOWEVER!** We are building this with future collaboration in mind! 🎉 Once the core Display Node functionality and Pi sync are stable, we plan to open up contributions. Keep an eye on the main LumiGrid repository for updates! 👀
 
-3.  **Install dependencies:** You'll need the `rpi-rgb-led-matrix` library and other dependencies.
+---
 
-4.  **Explore the code in the `app/` directory.**
+## 🔗 Stay Tuned!
 
-5.  **Build and run the application on your Raspberry Pi.**
+Follow the main LumiGrid repository for updates on our progress! 😊
 
-6.  **Use the web UI to control your displays!**
+---
 
-## 🤝 Contributing
-
-Contributions are welcome! If you have improvements to display driving, content handling, the web interface, or any other part of the project, please submit a pull request. 💪
-
-## 🐛 Issues
-
-Please report any bugs or issues in this repository.
-
-## 📜 License
-
-\[License information will go here]
-
-## Let's make some eye-catching displays! 🤩
+Made with ❤️ by DevSlavDev for Cube & Reclame Fabriek
